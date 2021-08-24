@@ -3,6 +3,97 @@ package main
 var eru = "Eru"
 
 func main() {
+	// Conditionals and Booleans
+	/*
+		age := 45
+
+		fmt.Println(age < 50)
+		fmt.Println(age == 45)
+		fmt.Println(age != 33)
+
+		if age < 30 {
+			fmt.Println("I'm under 30!")
+		} else if age < 40 {
+			fmt.Println("I'm also under 40!")
+		} else {
+			fmt.Println("Blah...I'm old!")
+		}
+
+		names := []string{"Bilbo", "Frodo", "Merry", "Pippin"}
+
+		for index, value := range names {
+			if index == 1 {
+				fmt.Println("Continuing at position", index)
+				continue // Stop the execution of this iteration of the loop, but don't kill the loop
+			}
+
+			if index > 2 {
+				fmt.Println("Breaking the fellowhip!")
+				break // Kill the loop
+			}
+
+			fmt.Printf("The fellowship member at %v is %v\n", index, value)
+		}
+	*/
+
+	// Loops
+	/*
+		x := 0
+
+		for x < 5 {
+			fmt.Println("Value of x:", x)
+			x++
+		}
+
+		for i := 0; i < 5; i++ {
+			fmt.Println("Different loop: ", i)
+		}
+
+		names := []string{"Bilbo", "Frodo", "Merry", "Pippin"}
+
+		for i := 0; i < len(names); i++ {
+			fmt.Println("On the journey", names[i])
+		}
+
+		for index, value := range names {
+			fmt.Printf("In the fellowship %v at number %v\n", value, index)
+		}
+
+		for _, value := range names {
+			fmt.Printf("In the fellowship %v (who cares where...)\n", value)
+			value = "Balrog" // Doesn't change the value in the slice
+		}
+
+		fmt.Println(names)
+	*/
+
+	// Standard Library
+	/*
+		greeting := "hello there!"
+
+		fmt.Println(strings.Contains(greeting, "hello"))
+		fmt.Println(strings.ReplaceAll(greeting, "hello", "goodbye")) // No mutation
+		fmt.Println(strings.ToUpper(greeting))
+		fmt.Println(strings.Index(greeting, "ll"))
+		fmt.Println(strings.Index(greeting, "th"))
+		fmt.Println(strings.Split(greeting, " "))
+
+		ages := []int{5, 6, 3, 4, 8, 2, 1}
+
+		sort.Ints(ages) // Mutates the slice
+		fmt.Println(ages)
+
+		index := sort.SearchInts(ages, 4)
+		fmt.Println("Index", index)
+
+		names := []string{"Bilbo", "Frodo", "Merry", "Pippin"}
+		sort.Strings(names)
+		fmt.Println(names)
+
+		fmt.Println(sort.SearchStrings(names, "Pippin"))
+		fmt.Println(sort.SearchStrings(names, "Gandalf")) // Returns the position it should go in
+	*/
+
 	// Arrays and Slices
 	/*
 		var ages [3]int = [3]int{20, 25, 30}
