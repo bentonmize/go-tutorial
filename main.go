@@ -1,8 +1,73 @@
 package main
 
+import (
+	"fmt"
+	"math"
+	"strings"
+)
+
 var eru = "Eru"
 
+func sayGreeting(n string) {
+	fmt.Printf("Good morning %v, or a morning to be good on!\n", n)
+}
+
+func sayBye(n string) {
+	fmt.Printf("Good bye %v\n", n)
+}
+
+func cycleDwarves(n []string, f func(string)) {
+	for _, name := range n {
+		f(name)
+	}
+}
+
+func getInitials(n string) (string, string) {
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, name := range names {
+		initials = append(initials, name[:1])
+	}
+
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+
+	return initials[0], "_"
+}
+
+func weight(r float64) float64 {
+	return math.Pi * math.Pow(r, 2)
+}
+
 func main() {
+	// Multiple Return Functions
+	/*
+		first, second := getInitials("Sackville Baggins")
+		fmt.Printf("Initials: %v. %v.\n", first, second)
+
+		first1, second1 := getInitials("Lobelia")
+		fmt.Printf("Initials: %v. %v.\n", first1, second1)
+
+		first2, second2 := getInitials("Meriadoc Brandybuck")
+		fmt.Printf("Initials: %v. %v.\n", first2, second2)
+	*/
+
+	// Functions
+	/*
+		sayGreeting("Gandalf")
+		sayBye("Bilbo")
+
+		dwarves := []string{"Bifur", "Bofur", "Bombur", "Nori", "Dori"}
+
+		cycleDwarves(dwarves, sayGreeting)
+
+		bomburWeight := weight(10.5)
+		fmt.Printf("Bombur weighs: %0.3f\n", bomburWeight)
+	*/
+
 	// Conditionals and Booleans
 	/*
 		age := 45
